@@ -1,7 +1,7 @@
 import http.server
 import socketserver
 from urllib.parse import urlparse,parse_qs
-from converter_proj.converter import SelectConverter
+from converter import SelectConverter
 
 PORT = 8000 
 

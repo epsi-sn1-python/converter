@@ -1,13 +1,13 @@
 import requests
 
-url = f"http://localhost:8000?choice={choice}&amount={amount}"
+while True:
+    choice=int(input("1 ou 2 : "))
+    amount=int(input("nombre : "))
 
-choice=input(type=int)
-amount=input(type=int)
+    url = f"http://localhost:8000?choice={choice}&amount={amount}"
+    payload={}
+    headers = {}
 
-payload={}
-headers = {}
+    response = requests.request("GET", url, headers=headers, data=payload)
 
-response = requests.request("GET", url, headers=headers, data=payload)
-
-print(response.text)
+    print(response.text)
